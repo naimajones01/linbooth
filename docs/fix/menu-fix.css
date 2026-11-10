@@ -1,0 +1,31 @@
+/* Correctif hors ligne : menus déroulants sans le JavaScript Site */
+li[data-testid="menuItemDepth0"] { position: relative; }
+li[data-testid="menuItemDepth0"] > [data-testid="positionBox"] {
+  display: none !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;
+  min-width: 220px;
+  padding-top: 8px;
+}
+li[data-testid="menuItemDepth0"].menu-ouvert > [data-testid="positionBox"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+li[data-testid="menuItemDepth0"] > [data-testid="positionBox"] > * {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  position: static !important;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
+  padding: 8px 0;
+}
+li[data-testid="menuItemDepth0"] [data-testid="positionBox"] ul { list-style: none; margin: 0; padding: 0; }
+li[data-testid="menuItemDepth0"] [data-testid="positionBox"] a {
+  display: block; padding: 10px 20px; white-space: nowrap; text-decoration: none;
+}
+li[data-testid="menuItemDepth0"] [data-testid="positionBox"] a:hover { background: #f4f4f4; }

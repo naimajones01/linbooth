@@ -1,0 +1,40 @@
+/* Formulaires Web3Forms (remplacent les formulaires Site) */
+.formulaire-w3f {
+  font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
+  color: #191919; display: grid; gap: 18px; padding: 8px 0 24px; box-sizing: border-box; width: 100%;
+  position: relative; z-index: 5; background: #fff;
+}
+.formulaire-w3f .rangee { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.formulaire-w3f label, .formulaire-w3f legend { display: block; font-size: 14px; margin-bottom: 6px; color: #373b4d; }
+.formulaire-w3f .requis::after { content: " *"; color: #b0413e; }
+.formulaire-w3f input[type="text"], .formulaire-w3f input[type="email"], .formulaire-w3f input[type="tel"],
+.formulaire-w3f input[type="date"], .formulaire-w3f input[type="time"], .formulaire-w3f select, .formulaire-w3f textarea {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 15px; color: #191919;
+  background: #fff; border: 1px solid #bdbdbd; border-radius: 0; padding: 10px 12px;
+}
+.formulaire-w3f textarea { min-height: 120px; resize: vertical; }
+.formulaire-w3f input:focus, .formulaire-w3f select:focus, .formulaire-w3f textarea:focus { outline: 2px solid #d4a24c; outline-offset: 0; border-color: #191919; }
+.formulaire-w3f fieldset { border: 0; padding: 0; margin: 0; }
+.formulaire-w3f .choix { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.formulaire-w3f .choix label { display: inline-flex; align-items: center; gap: 6px; margin: 0; font-size: 15px; color: #191919; cursor: pointer; }
+.formulaire-w3f .aide { font-size: 13px; color: #555; margin: 6px 0 0; line-height: 1.5; }
+.formulaire-w3f .aide a { color: inherit; }
+.formulaire-w3f button[type="submit"] {
+  justify-self: start; background: #191919; color: #fff; border: 0; padding: 12px 34px; cursor: pointer;
+  font: italic 14px georgia, serif; letter-spacing: .08em; text-transform: uppercase;
+}
+.formulaire-w3f button[type="submit"]:hover { background: #3a3a3a; }
+.formulaire-w3f button[disabled] { opacity: .6; cursor: wait; }
+.formulaire-statut { font-size: 15px; min-height: 1em; margin: 0; }
+.formulaire-statut.succes { color: #2e7d32; }
+.formulaire-statut.erreur { color: #b0413e; }
+.formulaire-w3f .pot-de-miel { display: none !important; }
+@media (max-width: 600px) { .formulaire-w3f .rangee { grid-template-columns: 1fr; } }
+
+/* Bouton de langue FR / EN */
+.choix-langue { position: fixed; top: 0; right: 16px; z-index: 10000; display: flex; border: 1px solid #e6c48f; background: #fff; font: 12px Arial, sans-serif; }
+.choix-langue a, .choix-langue span { padding: 6px 10px; text-decoration: none; color: #191919; }
+.choix-langue span { color: #d4a24c; }
+
+/* Évite le défilement horizontal : l'en-tête et certaines sections Site débordent à droite */
+#SITE_HEADER, section.ui-section { overflow-x: clip; }
