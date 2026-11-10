@@ -1,6 +1,0 @@
-/* FAQ : réponse ouverte et flèche retournée */
-.faq-ouvert > .rah-static { height: auto !important; overflow: visible !important; }
-.faq-ouvert > .rah-static > div { opacity: 1 !important; }
-[data-hook="accordion-item-header"] [aria-hidden="true"] svg { transition: transform .2s; }
-[data-hook="accordion-item-header"][aria-expanded="true"] [aria-hidden="true"] svg { transform: rotate(180deg); }
-[data-onglet][hidden] { display: none !important; }
