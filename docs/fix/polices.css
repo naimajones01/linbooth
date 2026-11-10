@@ -1,0 +1,33 @@
+/* Polices libres (licence SIL OFL) qui remplacent les polices d'origine.
+   size-adjust : même largeur de texte que l'original, pour garder la mise en page.
+   ascent/descent/line-gap : mêmes hauteurs de ligne que l'original. */
+@font-face {
+  font-family: 'forum';             /* grands titres (remplace Brown Sugar) */
+  src: url('../assets/polices/forum/forum.woff2') format('woff2');
+  font-display: swap; size-adjust: 104.8%;
+  ascent-override: 71.56%; descent-override: 23.85%; line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'prata';             /* chiffres et noms des forfaits (remplace Higuen) */
+  src: url('../assets/polices/prata/prata.woff2') format('woff2');
+  font-display: swap; size-adjust: 78%;
+  ascent-override: 96.15%; descent-override: 32.05%; line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'belleza';           /* textes des sections (remplace Alta Caption) */
+  src: url('../assets/polices/belleza/belleza.woff2') format('woff2');
+  font-display: swap; size-adjust: 92.5%;
+  ascent-override: 86.49%; descent-override: 21.62%; line-gap-override: 9.73%;
+}
+@font-face {
+  font-family: 'belleza-large';     /* « BOOMERANGS » (remplace Alta) */
+  src: url('../assets/polices/belleza/belleza.woff2') format('woff2');
+  font-display: swap; size-adjust: 90.7%;
+  ascent-override: 88.2%; descent-override: 22.05%; line-gap-override: 9.92%;
+}
+
+/* Les polices d'origine n'avaient que des majuscules : on garde le même rendu */
+.font_0, .font_4, [data-hook="faq-root"] h2[data-hook="title"],
+[style*="font-family:forum"], [style*="font-family:belleza"] { text-transform: uppercase; }
+/* …mais pas sur un texte qui indique lui-même une autre police */
+[style*="font-family:"]:not([style*="font-family:forum"]):not([style*="font-family:belleza"]) { text-transform: none; }

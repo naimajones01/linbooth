@@ -38,3 +38,10 @@
 
 /* Évite le défilement horizontal : l'en-tête et certaines sections Site débordent à droite */
 #SITE_HEADER, section.ui-section { overflow-x: clip; }
+
+/* Police des lignes vides du gabarit : aucune lettre affichée, seules ses hauteurs comptent */
+@font-face {
+  font-family: 'ligne-vide';
+  src: url('../assets/polices/nunito-sans/nunito-sans-300.woff2') format('woff2');
+  ascent-override: 80.37%; descent-override: 11.52%; line-gap-override: 23.14%;
+}
